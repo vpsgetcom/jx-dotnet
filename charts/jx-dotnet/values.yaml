@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 2
 image:
-  repository: draft
-  tag: dev
+  repository: 660914637642.dkr.ecr.us-west-2.amazonaws.com/vpsgetcom/jx-dotnet
+  tag: 0.0.7
   pullPolicy: IfNotPresent
 service:
   name: jx-dotnet
