@@ -5,6 +5,7 @@ pipeline {
     environment {
       ORG               = 'apaz037'
       APP_NAME          = 'jx-dotnet'
+      CHART_REPOSITORY = 'http://chartmuseum.jx.138.201.58.182.nip.io'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
