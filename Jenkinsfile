@@ -3,8 +3,8 @@ pipeline {
         label "jenkins-jx-base"
     }
     environment {
-      ORG               = 'apaz037'
-      APP_NAME          = 'jx-dotnet'
+      ORG               = 'ndi-test'
+      APP_NAME          = 'jx-dotnet-ndi'
       CHART_REPOSITORY = 'http://chartmuseum.jx.138.201.58.182.nip.io'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
