@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := http://chartmuseum.jx.138.201.58.182.nip.io
 CURRENT=$(pwd)
 NAME := jx-dotnet
 OS := $(shell uname)
