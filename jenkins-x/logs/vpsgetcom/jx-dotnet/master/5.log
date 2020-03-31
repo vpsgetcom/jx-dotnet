@@ -1,0 +1,254 @@
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-kvcz5[0m
+{"level":"warn","ts":1585681600.394349,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585681600.395065,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xsxlg[0m
+{"level":"warn","ts":1585681601.452269,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585681601.453228,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vpsgetcom-jx-dotnet-master-rele-nhs7g-kckk8[0m
+{"level":"warn","ts":1585681607.7658157,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585681608.4045646,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/******com/**-dotnet.git @ v0.0.5 in path /workspace/source"}
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6d69c6e87280d79382d435c0bcdb00236dbed10f
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image microsoft/aspnetcore-build:2.0 
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:296a8da8c2b8eca576b54216ddddace273b0d96792e5cecf02f4fb242206accd: no such file or directory 
+[36mINFO[0m[0001] Downloading base image microsoft/aspnetcore-build:2.0 
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] Using files from context: [/workspace/source/aspnetapp.csproj] 
+[36mINFO[0m[0001] Checking for cached layer 660914637642.dkr.ecr.us-west-2.amazonaws.com/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337... 
+[36mINFO[0m[0002] No cached layer found for cmd RUN dotnet restore 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN dotnet restore requires it. 
+[36mINFO[0m[0083] Taking snapshot of full filesystem...        
+[36mINFO[0m[0108] WORKDIR /app                                 
+[36mINFO[0m[0108] cmd: workdir                                 
+[36mINFO[0m[0108] Changed working directory to /app            
+[36mINFO[0m[0108] Creating directory /app                      
+[36mINFO[0m[0108] Taking snapshot of files...                  
+[36mINFO[0m[0108] Using files from context: [/workspace/source/aspnetapp.csproj] 
+[36mINFO[0m[0108] COPY *.csproj ./                             
+[36mINFO[0m[0108] Taking snapshot of files...                  
+[36mINFO[0m[0108] RUN dotnet restore                           
+[36mINFO[0m[0108] cmd: /bin/sh                                 
+[36mINFO[0m[0108] args: [-c dotnet restore]                    
+  Restoring packages for /app/aspnetapp.csproj...
+  Restoring packages for /app/aspnetapp.csproj...
+  Installing Microsoft.Extensions.FileSystemGlobbing 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Physical 2.0.0.
+  Installing Microsoft.VisualStudio.Web.CodeGeneration.Contracts 2.0.0.
+  Installing Microsoft.VisualStudio.Web.CodeGeneration.Tools 2.0.0.
+  Restore completed in 11.48 sec for /app/aspnetapp.csproj.
+  Installing Microsoft.DotNet.PlatformAbstractions 2.0.0.
+  Installing System.Data.SqlClient 4.4.0.
+  Installing Microsoft.Extensions.DependencyModel 2.0.0.
+  Installing System.Security.Cryptography.Xml 4.4.0.
+  Installing Microsoft.EntityFrameworkCore.SqlServer 2.0.0.
+  Installing Microsoft.Extensions.Caching.SqlServer 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Core 2.0.0.
+  Installing Microsoft.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.AspNetCore.All 2.0.0.
+  Installing Microsoft.AspNetCore.Razor.Language 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Xml 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Relational 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.ViewFeatures 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Core 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Design 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Tools 2.0.0.
+  Installing Microsoft.AspNetCore 2.0.0.
+  Installing Microsoft.AspNetCore.Server.HttpSys 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel 2.0.0.
+  Installing Microsoft.AspNetCore.Server.IISIntegration 2.0.0.
+  Installing Microsoft.Extensions.Configuration.CommandLine 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor.ViewCompilation 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Facebook 2.0.0.
+  Installing Microsoft.Extensions.Configuration.FileExtensions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Google 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.MicrosoftAccount 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.HttpOverrides 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc 2.0.0.
+  Installing Microsoft.AspNetCore.Cryptography.KeyDerivation 2.0.0.
+  Installing Microsoft.AspNetCore.MiddlewareAnalysis 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Https 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Cors 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Core 2.0.0.
+  Installing Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.0.
+  Installing Microsoft.AspNetCore.AzureAppServices.HostingStartup 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.Extensions 2.0.0.
+  Installing Microsoft.AspNetCore.Authorization.Policy 2.0.0.
+  Installing Microsoft.AspNetCore.Localization 2.0.0.
+  Installing Microsoft.AspNetCore.AzureAppServicesIntegration 2.0.0.
+  Installing Microsoft.AspNetCore.Antiforgery 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor 2.0.0.
+  Installing Microsoft.AspNetCore.Localization.Routing 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting.Server.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Extensions 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Json 2.0.0.
+  Installing Microsoft.AspNetCore.Html.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.AzureStorage 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.DataAnnotations 2.0.0.
+  Installing Microsoft.Extensions.Caching.Memory 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Sqlite 2.0.0.
+  Installing Microsoft.Data.Sqlite 2.0.0.
+  Installing Microsoft.Extensions.Hosting.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.OAuth 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Composite 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Ini 2.0.0.
+  Installing Microsoft.Extensions.Localization.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Cookies 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Features 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Twitter 2.0.0.
+  Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+  Installing Microsoft.AspNetCore.Routing 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.ApiExplorer 2.0.0.
+  Installing Microsoft.AspNetCore.Cors 2.0.0.
+  Installing Microsoft.Extensions.Logging.Debug 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Formatters.Json 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Localization 2.0.0.
+  Installing Microsoft.AspNetCore.CookiePolicy 2.0.0.
+  Installing Microsoft.Extensions.Configuration.UserSecrets 2.0.0.
+  Installing Microsoft.Extensions.Logging.Configuration 2.0.0.
+  Installing Microsoft.Extensions.Logging.TraceSource 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCaching.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Binder 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Logging.EventSource 2.0.0.
+  Installing Microsoft.Extensions.Logging.Console 2.0.0.
+  Installing Microsoft.Extensions.Logging 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting 2.0.0.
+  Installing Microsoft.AspNetCore.Authorization 2.0.0.
+  Installing Microsoft.Extensions.Caching.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Options.ConfigurationExtensions 2.0.0.
+  Installing Microsoft.Extensions.WebEncoders 2.0.0.
+  Installing Microsoft.AspNetCore.Identity 2.0.0.
+  Installing Microsoft.AspNetCore.Identity.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics 2.0.0.
+  Installing Microsoft.AspNetCore.Razor 2.0.0.
+  Installing Microsoft.AspNetCore.Razor.Runtime 2.0.0.
+  Installing Microsoft.AspNetCore.Owin 2.0.0.
+  Installing Microsoft.AspNetCore.NodeServices 2.0.0.
+  Installing Microsoft.AspNetCore.Session 2.0.0.
+  Installing Microsoft.AspNetCore.Routing.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Localization 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCaching 2.0.0.
+  Installing Microsoft.Data.Sqlite.Core 2.0.0.
+  Installing Microsoft.AspNetCore.Http 2.0.0.
+  Installing Microsoft.Extensions.Logging.Abstractions 2.0.0.
+  Installing Microsoft.VisualStudio.Web.BrowserLink 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCompression 2.0.0.
+  Installing Microsoft.AspNetCore.WebSockets 2.0.0.
+  Installing Microsoft.AspNetCore.WebUtilities 2.0.0.
+  Installing Microsoft.Extensions.Options 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Formatters.Xml 2.0.0.
+  Installing Microsoft.Extensions.Logging.AzureAppServices 2.0.0.
+  Installing Microsoft.Extensions.Identity.Stores 2.0.0.
+  Installing Microsoft.AspNetCore.Rewrite 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.OpenIdConnect 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.JwtBearer 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Embedded 2.0.0.
+  Installing Microsoft.Extensions.Caching.Redis 2.0.0.
+  Installing Microsoft.Extensions.Configuration.AzureKeyVault 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.InMemory 2.0.0.
+  Installing Microsoft.AspNetCore.StaticFiles 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv 2.0.0.
+  Installing Microsoft.AspNetCore.ApplicationInsights.HostingStartup 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions 2.0.0.
+  Installing Microsoft.Net.Http.Headers 2.0.0.
+  Installing Microsoft.Extensions.Configuration 2.0.0.
+  Installing Microsoft.Extensions.DiagnosticAdapter 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.RazorPages 2.0.0.
+  Installing Microsoft.Extensions.Identity.Core 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor.Extensions 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.TagHelpers 2.0.0.
+  Installing Microsoft.CodeAnalysis.Razor 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Sqlite.Core 2.0.0.
+  Installing Microsoft.AspNetCore.SpaServices 2.0.0.
+  Generating MSBuild file /app/obj/aspnetapp.csproj.nuget.g.props.
+  Generating MSBuild file /app/obj/aspnetapp.csproj.nuget.g.targets.
+  Restore completed in 14.19 sec for /app/aspnetapp.csproj.
+[36mINFO[0m[0126] Taking snapshot of full filesystem...        
+[36mINFO[0m[0156] Pushing layer 660914637642.dkr.ecr.us-west-2.amazonaws.com/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337 to cache now 
+[36mINFO[0m[0156] Using files from context: [/workspace/source] 
+[36mINFO[0m[0156] COPY . ./                                    
+[36mINFO[0m[0157] Taking snapshot of files...                  
+[36mINFO[0m[0157] RUN dotnet publish -c Release -o out         
+[36mINFO[0m[0157] cmd: /bin/sh                                 
+[36mINFO[0m[0157] args: [-c dotnet publish -c Release -o out]  
+Microsoft (R) Build Engine version 15.7.179.6572 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 386.87 ms for /app/aspnetapp.csproj.
+  Restore completed in 110.73 ms for /app/aspnetapp.csproj.
+  aspnetapp -> /app/bin/Release/netcoreapp2.0/aspnetapp.dll
+  aspnetapp -> /app/out/
+[36mINFO[0m[0180] Taking snapshot of full filesystem...        
+[36mINFO[0m[0204] ignoring socket CoreFxPipe_root.F.b8chWRlb9Z9+OWmw6LCxMVL+d, not adding to tar 
+[36mINFO[0m[0205] Pushing layer 660914637642.dkr.ecr.us-west-2.amazonaws.com/todo/cache:653df3461707b28248d0e87f806b8057e4d47cc472e8ac9c93e3fa44b85621b7 to cache now 
+[36mINFO[0m[0205] ENTRYPOINT ["dotnet", "out/aspnetapp.dll"]   
+[36mINFO[0m[0205] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0206] error uploading layer to cache: failed to push to destination 660914637642.dkr.ecr.us-west-2.amazonaws.com/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337: NAME_UNKNOWN: The repository with name 'todo/cache' does not exist in the registry with id '660914637642' 
+2020/03/31 19:10:18 existing blob: sha256:4d833e0fa2188e68647a4f4e71767f659ad2e94edd96bd48b75c4ba6daf266ce
+2020/03/31 19:10:18 existing blob: sha256:1607093a898cc241de8712e4361dcd907898fff35b945adca42db3963f3827b3
+2020/03/31 19:10:18 existing blob: sha256:9996a3dbf48fd91893eb58c8f1a41b6a61e782f464c1c3d555702b3aefc6aa7a
+2020/03/31 19:10:18 existing blob: sha256:9a8ea045c9261c180a34df19cfc9bb3c3f28f29b279bf964ee801536e8244f2f
+2020/03/31 19:10:18 existing blob: sha256:d4eee24d4dacb41c21411e0477a741655303cdc48b18a948632c31f0f3a70bb8
+2020/03/31 19:10:18 existing blob: sha256:e626b8d73a892646c35204220977822512ef164668acc40ce997f124e190fe01
+2020/03/31 19:10:18 existing blob: sha256:4867c32ba582ce0af39ac32e2e7b571a8ac3230ae94cbe262055c608b341c391
+2020/03/31 19:10:18 existing blob: sha256:55cbf04beb7001d222c71bfdeae780bda19d5cb37b8dbd65ff0d3e6a0b9b74e6
+2020/03/31 19:10:18 existing blob: sha256:c0ece037099c52dc882a9bf0d053cc144b4b813547fb17c119344209597d21de
+2020/03/31 19:10:18 pushed blob: sha256:439f9ee6c48cac963cda81aa12e912dc5cb3f2b72fa1e12f1884cc15bacb4553
+2020/03/31 19:10:19 pushed blob: sha256:3e8340902ba4796308b0407fddbcfdba3a8da9464a09127a369a01dec343f911
+2020/03/31 19:10:19 pushed blob: sha256:b8e52acf21ee2e3d36015a61b6b6e0867ae6564d824fd36da48ddef013f20b4f
+2020/03/31 19:10:19 existing blob: sha256:1eebc8a262e7ad7ddb898a1e1ca5239b87e7eb58cdb5b347c1657ea79441bffc
+2020/03/31 19:10:19 pushed blob: sha256:8e85529a7c62bad402151411208ab8f7dc581bbb27e478de91bc5a7599d46cd8
+2020/03/31 19:10:21 pushed blob: sha256:1ccf7d06efb398c0143015e015b858484edfcf9ed1d050a545cbf8bb9de120ed
+2020/03/31 19:10:25 pushed blob: sha256:53c1c96d50589b706fe9d29f4ee4c69046e870025b8b58c278bbbade89898e4b
+2020/03/31 19:10:25 660914637642.dkr.ecr.us-west-2.amazonaws.com/******com/**-dotnet:0.0.5: digest: sha256:17d52a65fa1db9cfe31a0eaf94e6c479e09f35e28eb554e024b0d13f3a5fecc4 size: 2723
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/**-dotnet to an unshallow repository
+Generating change log from git ref 9ef065b56081aca4715fb28efad6fa86fef7f652 => f77d9e42f4a1549fb5e49661ed376dc5f4bb082f
+WARNING: Failed to enrich commit e0e7e598235651c78e5264bb2baceec82c9987b5 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit e0e7e598235651c78e5264bb2baceec82c9987b5 with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for ******com/**-dotnet and tag v0.0.5 so creating a new release
+Updated the release information at https://github.com/******com/**-dotnet/releases/tag/v0.0.5
+generated: /workspace/source/charts/**-dotnet/templates/release.yaml
+Created Release **-dotnet-0-0-5 resource in namespace **
+Updating PipelineActivity ******com-**-dotnet-master-5 with version 0.0.5
+Updated PipelineActivities ******com-**-dotnet-master-5 with release notes URL: https://github.com/******com/**-dotnet/releases/tag/v0.0.5
+
+Showing logs for build [32mvpsgetcom-jx-dotnet-master-rele-nhs7g-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file **-dotnet-0.0.5.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 401 response: {"error":"unauthorized"}
+error: Failed to post chart to http://jenkins-x-chartmuseum:8080/api/charts due to response 401: {"error":"unauthorized"}
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-helm-release'. The execution of the pipeline has stopped.[0m
